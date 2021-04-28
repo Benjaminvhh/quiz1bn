@@ -1,0 +1,49 @@
+<script src="https://kit.fontawesome.com/ee77aa96a5.js" crossorigin="anonymous"></script>
+
+<div class="flex">
+    <div>
+        <div *ngFor="let tarea of tareas">
+            <button  id="leftbox" *ngIf=" tarea.estado === '3'">
+                {{tarea.titulo}}
+            </button> 
+        </div>
+    </div>
+
+    <div>
+        <div *ngFor="let tarea of tareas">
+            <button   id="middlebox" *ngIf=" tarea.estado === '2'">
+                {{tarea.titulo}}
+            </button>
+        </div>
+    </div>
+
+    <div>
+        <div *ngFor="let tarea of tareas">
+            <button (click)="onnSubmit(tarea)" id="rightbox" *ngIf=" tarea.estado === '1'">
+                {{tarea.titulo}}
+            </button> 
+
+        </div>
+    </div>
+
+</div>
+<a [routerLink]="['/vistaMain']" ><button id="boton" name="add">+</button></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

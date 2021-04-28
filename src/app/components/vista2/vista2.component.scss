@@ -1,0 +1,35 @@
+ul{
+    list-style-type: none;
+}
+
+#leftbox {
+    margin-top:10px;
+    text-align: center;
+    padding-top:10px;
+    background:greenyellow;
+    width:400px;
+    height:50px;
+    margin-right:10px;
+}
+#middlebox{
+    margin-top:10px;
+    padding-top:10px;
+    background:yellow;
+    width:400px;
+    height:50px;
+    margin-right:10px;
+    text-align: center;
+}
+#rightbox{
+    margin-top:10px;
+    padding-top:10px;
+    background:Red;
+    width:400px;
+    height:50px;
+    margin-right:10px;
+    text-align: center;
+}
+.flex{
+    justify-content: space-evenly;
+    display:flex;
+}

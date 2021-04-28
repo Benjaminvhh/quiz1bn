@@ -1,0 +1,34 @@
+<form [formGroup]="formulario" (ngSubmit)="OnSubmit()" novalidate>
+  <ul>
+      <li>
+          <label for="Titulo">
+              Título
+          </label>
+           <input id="Titulo" formControlName="Titulo" type="email">
+              <div *ngIf="Titulo.errors && Titulo.dirty">
+                  <div *ngIf="Titulo.hasError('required')">El campo es obligatorio</div>
+
+              </div>   
+      </li>
+
+      <li>
+         <label for="estado">
+            Estado
+         </label>
+         <select id="estado" formControlName="estado" name="estado">
+             <option *ngFor="let item of opciones" [value]="item.value">
+              {{item.viewValue}}
+             </option>
+         </select>
+     </li>
+     <li class="flex">
+         <div>
+            <button type="submit" class="botonMain1"> Crear</button>
+         </div>
+         <div>
+            <button type="button" class="botonMain"> Cancelar</button>
+         </div>
+     </li>
+  </ul>
+
+</form>

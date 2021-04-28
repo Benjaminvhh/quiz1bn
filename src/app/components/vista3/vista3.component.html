@@ -1,0 +1,29 @@
+<form [formGroup]="formulario" (ngSubmit)="Actualizar()" novalidate>
+    <ul>
+        <li>
+            <label for="Titulo">
+                Título
+            </label>
+             <input id="Titulo" formControlName="Titulo" type="email">
+                <div *ngIf="Titulo.errors && Titulo.dirty">
+                    <div *ngIf="Titulo.hasError('required')">El campo es obligatorio</div>
+  
+                </div>   
+        </li>
+  
+        <li>
+           <label for="estado">
+              Estado
+           </label>
+           <select id="estado" formControlName="estado" name="estado">
+               <option *ngFor="let item of opciones" [value]="item.value">
+                {{item.viewValue}}
+               </option>
+           </select>
+       </li>
+       <li>
+         <button type="submit" name="submit"> Actualizar </button>
+       </li>
+    </ul>
+  
+</form>
